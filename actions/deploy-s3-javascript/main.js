@@ -3,7 +3,11 @@ github = require('@actions/github');
 exec = require('@actions/exec');
 
 function run() { 
+    // get input values
+    const bucket_name = core.getInput('bucket-name', { required: true}); // Dummy input for now
+
     core.notice('Hello from custom javascript action!');
+    core.info(`Event name: ${bucket_name}`);
 }
 
 run();
