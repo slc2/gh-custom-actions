@@ -72,5 +72,5 @@ jobs:
       - name: run custom action
         uses: ./actions/deploy-s3-javascript
         with:
-          bucket: 'my-s3-bucket'
+          bucket-name: 'my-s3-bucket'
         #uses: ./.github/actions/deploy-s3-javascript
