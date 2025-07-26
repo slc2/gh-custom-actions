@@ -75,4 +75,5 @@ jobs:
         with:
           bucket-name: 'my-s3-bucket'
       - name: Output custom action result
-        run: echo "Website URL: ${{ steps.custom-action.outputs.website-url }}"
+        run: |
+          echo "Website URL: ${{ steps.custom-action.outputs.website-url }}"
