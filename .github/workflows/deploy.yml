@@ -70,7 +70,9 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: run custom action
+        id: custom-action
         uses: ./actions/deploy-s3-javascript
         with:
           bucket-name: 'my-s3-bucket'
-        #uses: ./.github/actions/deploy-s3-javascript
+      - name: Output custom action result
+        run: echo "Website URL: ${{ steps.custom-action.outputs.website-url }}"

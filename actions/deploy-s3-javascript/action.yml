@@ -4,6 +4,9 @@ inputs:
   bucket-name:
     description: 'The name of the S3 bucket to deploy to. Dummy input for now'
     required: true
+outputs:
+  website-url:
+    description: 'The URL of the deployed website.'
 runs:
   using: node20
   main: 'main.js'
